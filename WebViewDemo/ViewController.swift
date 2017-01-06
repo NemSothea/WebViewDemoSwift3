@@ -10,14 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myWebView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let url = NSURL(string: "http://www.sourcefreeze.com")
+        let requestObj = NSURLRequest(url: url as! URL)
+       myWebView.loadRequest(requestObj as URLRequest)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+    
     }
 
 
